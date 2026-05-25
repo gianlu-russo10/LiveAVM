@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Display stile AVM</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Font Seven Segment -->
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #040430;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .left {
+            width: 60%;
+            font-size: 1.4em;
+            line-height: 1.4em;
+        }
+
+        .left p {
+            margin: 8px 0;
+        }
+
+        .right {
+            width: 35%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* ⭐ NUOVO BOX: bordo bianco, interno stesso colore dello sfondo */
+        .display-box {
+            font-family: 'Seven Segment', sans-serif;
+            font-size: 5em;
+            background-color: #040430; /* stesso sfondo */
+            padding: 20px 40px;
+            border-radius: 25px;
+            border: 4px solid white; /* bordo bianco */
+            color: #ff5555; /* testo bianco */
+            text-align: center;
+            min-width: 180px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- COLONNA SINISTRA -->
+    <div class="left">
+        <p><i class="fa-regular fa-circle"></i>   CODOGNO FS</p>
+        <p><i class="fa-solid fa-arrow-right"></i>   CASALPUSTERLENGO FS</p>
+        <p><i class="fa-solid fa-bicycle"></i>   CB01</p>
+        <br>
+        <p><i class="fa-solid fa-list"></i>   e001</p>
+        <p><i class="fa-solid fa-display"></i>   0151</p>
+    </div>
+
+    <!-- COLONNA DESTRA: BOX DIGITALE -->
+    <div class="right">
+        <div class="display-box">-9'</div>
+    </div>
+
+</div>
+
+</body>
+</html>
