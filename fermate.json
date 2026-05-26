@@ -1,0 +1,44 @@
+{
+  "turno": "CB101",
+  "linea": "g001 - 1",
+  "display": "5101",
+  "destinazione": "CODOGNO POLENG",
+
+  "fermate": [
+    {
+      "id": 1,
+      "nome": "CODOGNO Autostazione",
+      "lat": 45.164171,
+      "lon": 9.700090,
+      "raggio": 40
+    },
+    {
+      "id": 2,
+      "nome": "CODOGNO Telecom",
+      "lat": null,
+      "lon": null,
+      "raggio": 40
+    },
+    {
+      "id": 3,
+      "nome": "CODOGNO VALM",
+      "lat": 45.15962155920262,
+      "lon": 9.69812918419492,
+      "raggio": 40
+    },
+    {
+      "id": 4,
+      "nome": "CODOGNO FS",
+      "lat": 45.15550824270152,
+      "lon": 9.702428229819292,
+      "raggio": 40
+    },
+    {
+      "id": 5,
+      "nome": "CODOGNO - Polenghi Lombardo ",
+      "lat": 45.15479282774987,
+      "lon": 9.702956364164823,
+      "raggio": 40
+    }
+  ]
+}
