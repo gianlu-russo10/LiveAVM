@@ -1,44 +1,116 @@
 {
-  "turno": "CB101",
-  "linea": "g001 - 1",
-  "display": "5101",
-  "destinazione": "CODOGNO POLENG",
+  "turni": [
 
-  "fermate": [
     {
-      "id": 1,
-      "nome": "CODOGNO Autostazione",
-      "lat": 45.164171,
-      "lon": 9.700090,
-      "raggio": 40
+      "turno": "CB101",
+
+      "corse": [
+
+        {
+          "linea": "g001 - 1",
+          "display": "5101",
+          "destinazione": "CODOGNO POLENG",
+
+          "fermate": [
+            {
+              "id": 1,
+              "nome": "CODOGNO - Autostazione",
+              "orario": "07:15",
+              "lat": 45.164171,
+              "lon": 9.700090,
+              "raggio": 40
+            },
+            {
+              "id": 2,
+              "nome": "CODOGNO Telecom",
+              "orario": "07:17",
+              "lat": 45.161583,
+              "lon": 9.697167,
+              "raggio": 40
+            },
+            {
+              "id": 3,
+              "nome": "CODOGNO VALM",
+              "orario": "07:20",
+              "lat": 45.15962155920262,
+              "lon": 9.69812918419492,
+              "raggio": 40
+            },
+            {
+              "id": 4,
+              "nome": "CODOGNO FS",
+              "orario": "07:23",
+              "lat": 45.15550824270152,
+              "lon": 9.702428229819292,
+              "raggio": 40
+            },
+            {
+              "id": 5,
+              "nome": "CODOGNO - Polenghi Lombardo ",
+              "orario": "07:24",
+              "lat": 45.15479282774987,
+              "lon": 9.702956364164823,
+              "raggio": 40
+            }
+          ]
+        },
+
+        {
+          "linea": "g001 - 1",
+          "display": "5103",
+          "destinazione": "CODOGNO - Auto",
+
+          "fermate": [
+            {
+              "id": 1,
+              "nome": "CODOGNO - Polenghi Lombardo ",
+              "orario": "14:10",
+              "lat": 45.15479282774987,
+              "lon": 9.702956364164823,
+              "raggio": 40
+            },
+            {
+              "id": 2,
+              "nome": "CODOGNO FS",
+              "orario": "14:11",
+              "lat": 45.15550824270152,
+              "lon": 9.702428229819292,
+              "raggio": 40
+            },
+            {
+              "id": 3,
+              "nome": "CODOGNO VALM",
+              "orario": "14:15",
+              "lat": 45.15962155920262,
+              "lon": 9.69812918419492,
+              "raggio": 40
+            },
+            {
+              "id": 4,
+              "nome": "CODOGNO Telecom",
+              "orario": "14:17",
+              "lat": 45.161583,
+              "lon": 9.697167,
+              "raggio": 40
+            },
+            {
+              "id": 5,
+              "nome": "CODOGNO - Autostazione",
+              "orario": "14:20",
+              "lat": 45.164171,
+              "lon": 9.700090,
+              "raggio": 40
+            }
+          ]
+        }
+
+      ]
     },
+
     {
-      "id": 2,
-      "nome": "CODOGNO Telecom",
-      "lat": 45.161583,
-      "lon": 9.697167,
-      "raggio": 40
-    },
-    {
-      "id": 3,
-      "nome": "CODOGNO VALM",
-      "lat": 45.15962155920262,
-      "lon": 9.69812918419492,
-      "raggio": 40
-    },
-    {
-      "id": 4,
-      "nome": "CODOGNO FS",
-      "lat": 45.15550824270152,
-      "lon": 9.702428229819292,
-      "raggio": 40
-    },
-    {
-      "id": 5,
-      "nome": "CODOGNO - Polenghi Lombardo ",
-      "lat": 45.15479282774987,
-      "lon": 9.702956364164823,
-      "raggio": 40
+      "turno": "CB201",
+      "corse": []
     }
+
   ]
 }
