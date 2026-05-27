@@ -53,13 +53,12 @@
     <!-- altri turni in futuro -->
     
     <script>
+        
         function selezionaTurno(turno) {
-            // qui poi apriremo la schermata di selezione corsa
-            console.log("Turno selezionato:", turno);
-
-            // esempio di redirect (lo attiveremo quando creiamo la pagina successiva)
-            // window.location.href = "seleziona_corsa.html?turno=" + turno;
+           // apre direttamente il file HTML con lo stesso nome del turno
+           window.location.href = turno + ".html";
         }
+        
     </script>
 
 </body>
