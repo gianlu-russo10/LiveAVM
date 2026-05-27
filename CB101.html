@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Selezione Corsa</title>
+
+    <style>
+        body {
+            background-color: #040430;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .corsa {
+            font-size: 22px;
+            padding: 15px 0;
+            cursor: pointer;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid white;
+            opacity: 1;
+            margin: 10px 0;
+        }
+
+        .corsa:hover {
+            color: #a8c8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Selezionare Corsa</h1>
+
+    <div class="corsa" onclick="selezionaCorsa('Pol >TelFS')">
+        g001 - 1 | Autostazione → Telecom → FS → POLENGHI L.
+    </div>
+    <hr>
+
+    <div class="corsa" onclick="selezionaCorsa('Aut >FSTel')">
+        g001 - 1 | Polenghi L. → FS → Telecom → AUTOSTAZIONE
+    </div>
+    <hr>
+
+    <script>
+        function selezionaCorsa(corsa) {
+            console.log("Corsa selezionata:", corsa);
+
+            // redirect quando display.html sarà pronto
+            // window.location.href = "display.html?corsa=" + corsa;
+        }
+    </script>
+
+</body>
+</html>
