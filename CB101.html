@@ -53,13 +53,14 @@
     <hr>
 
     <script>
-        function selezionaCorsa(corsa) {
-            console.log("Corsa selezionata:", corsa);
+    function selezionaCorsa(corsa) {
+        console.log("Corsa selezionata:", corsa);
 
-            // redirect quando display.html sarà pronto
-            // window.location.href = "g001 Pol >TelFS.html?corsa=" + corsa;
-        }
-    </script>
+        // apre la pagina di selezione fermata passando l'ID corsa
+        window.location.href = "CB101_Fermate.html?corsa=" + encodeURIComponent(corsa);
+    }
+</script>
+
 
 </body>
 </html>
