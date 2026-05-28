@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>AVM Live Tracker - Gianluca Russo</title>
+    <title>AVM Live TRacker - Gianluca Russo</title>
 
     <style>
         body {
@@ -49,15 +49,30 @@
         const params = new URLSearchParams(window.location.search);
         const idCorsa = params.get("corsa");
 
-        // 2) Carica il file corretto: fermate.json
+        // 2) Carica fermate.json (struttura Turno → Corse → Fermate)
         fetch("fermate.json")
             .then(response => response.json())
             .then(data => {
 
-                // 3) Trova la corsa usando il TUO ID
-                const corsaSelezionata = data.corse.find(c => c.id === idCorsa);
+                // 3) Trova il turno CB101
+                const turno = data.turni.find(t => t.turno === "CB101");
 
-                // 4) Genera la lista fermate
+                if (!turno) {
+                    document.getElementById("listaFermate").innerHTML =
+                        "<div style='color:red;'>ERRORE: turno CB101 non trovato.</div>";
+                    return;
+                }
+
+                // 4) Trova la corsa usando il TUO ID
+                const corsaSelezionata = turno.corse.find(c => c.id === idCorsa);
+
+                if (!corsaSelezionata) {
+                    document.getElementById("listaFermate").innerHTML =
+                        "<div style='color:red;'>ERRORE: corsa non trovata.<br>ID ricevuto: " + idCorsa + "</div>";
+                    return;
+                }
+
+                // 5) Genera la lista fermate
                 const container = document.getElementById("listaFermate");
 
                 corsaSelezionata.fermate.forEach(f => {
@@ -72,12 +87,12 @@
                 });
             });
 
-        // 5) Quando clicchi una fermata
+        // 6) Quando clicchi una fermata
         function selezionaFermata(idFermata) {
             console.log("Fermata selezionata:", idFermata);
 
             // redirect alla pagina display
-            // window.location.href = "display.html?corsa=" + idCorsa + "&start=" + idFermata;
+            // window.location.href = "display.html?corsa=" + encodeURIComponent(idCorsa) + "&start=" + idFermata;
         }
     </script>
 
