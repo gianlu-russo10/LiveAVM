@@ -1,24 +1,20 @@
 {
   "turni": [
-
     {
       "turno": "CB101",
-
       "corse": [
-
         {
-          "id": "g001 Pol >TelFS"
-          "linea": "g001 - 1"
+          "id": "g001 Pol >TelFS",
+          "linea": "g001 - 1",
           "display": "5101",
           "destinazione": "CODOGNO POLENG",
-
           "fermate": [
             {
               "id": 1,
               "nome": "CODOGNO - Autostazione",
               "orario": "07:15",
               "lat": 45.164171,
-              "lon": 9.700090,
+              "lon": 9.70009,
               "raggio": 40
             },
             {
@@ -47,7 +43,7 @@
             },
             {
               "id": 5,
-              "nome": "CODOGNO - Polenghi Lombardo ",
+              "nome": "CODOGNO - Polenghi Lombardo",
               "orario": "07:24",
               "lat": 45.15479282774987,
               "lon": 9.702956364164823,
@@ -55,17 +51,15 @@
             }
           ]
         },
-
         {
-          "id": "g001 Aut >FSTel"
+          "id": "g001 Aut >FSTel",
           "linea": "g001 - 1",
           "display": "5103",
           "destinazione": "CODOGNO - Auto",
-
           "fermate": [
             {
               "id": 1,
-              "nome": "CODOGNO - Polenghi Lombardo ",
+              "nome": "CODOGNO - Polenghi Lombardo",
               "orario": "14:10",
               "lat": 45.15479282774987,
               "lon": 9.702956364164823,
@@ -100,12 +94,11 @@
               "nome": "CODOGNO - Autostazione",
               "orario": "14:20",
               "lat": 45.164171,
-              "lon": 9.700090,
+              "lon": 9.70009,
               "raggio": 40
             }
           ]
         }
-
       ]
     },
 
@@ -113,6 +106,5 @@
       "turno": "CB201",
       "corse": []
     }
-
   ]
 }
