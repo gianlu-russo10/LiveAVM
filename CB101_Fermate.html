@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>AVM Live Tracker - Gianluca Russo</title>
+
+    <style>
+        body {
+            background-color: #040430;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .fermata {
+            font-size: 22px;
+            padding: 15px 0;
+            cursor: pointer;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid white;
+            opacity: 1;
+            margin: 10px 0;
+        }
+
+        .fermata:hover {
+            color: #a8c8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Selezionare Fermata di Partenza</h1>
+
+    <div id="listaFermate"></div>
+
+    <script>
+        // 1) Legge l'ID corsa dalla query string
+        const params = new URLSearchParams(window.location.search);
+        const idCorsa = params.get("corsa");
+
+        // 2) Carica il file corretto: fermate.json
+        fetch("fermate.json")
+            .then(response => response.json())
+            .then(data => {
+
+                // 3) Trova la corsa usando il TUO ID
+                const corsaSelezionata = data.corse.find(c => c.id === idCorsa);
+
+                // 4) Genera la lista fermate
+                const container = document.getElementById("listaFermate");
+
+                corsaSelezionata.fermate.forEach(f => {
+                    const div = document.createElement("div");
+                    div.className = "fermata";
+                    div.innerHTML = `${f.nome} | ${f.orario}`;
+                    div.onclick = () => selezionaFermata(f.id);
+                    container.appendChild(div);
+
+                    const hr = document.createElement("hr");
+                    container.appendChild(hr);
+                });
+            });
+
+        // 5) Quando clicchi una fermata
+        function selezionaFermata(idFermata) {
+            console.log("Fermata selezionata:", idFermata);
+
+            // redirect alla pagina display
+            // window.location.href = "display.html?corsa=" + idCorsa + "&start=" + idFermata;
+        }
+    </script>
+
+</body>
+</html>
